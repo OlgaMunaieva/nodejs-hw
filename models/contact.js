@@ -7,6 +7,7 @@ const contactSchema = new Schema(
       type: String,
       required: [true, "Set name for contact"],
     },
+    avatarURL: String,
     email: {
       type: String,
       match: /^\w+@\w+.\w+$/,
