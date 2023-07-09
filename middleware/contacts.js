@@ -2,6 +2,8 @@ const HttpError = require("../helpers/HttpError");
 
 const validateBody = (schema) => {
   const func = (req, res, next) => {
+    console.log(req.body);
+    console.log(req.file);
     const { error } = schema.validate(req.body);
     if (!Object.keys(req.body).length) {
       throw HttpError(
