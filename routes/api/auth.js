@@ -32,4 +32,6 @@ router.patch(
   updateAvatar
 );
 
+router.get("/verify/:verificationToken");
+
 module.exports = router;
