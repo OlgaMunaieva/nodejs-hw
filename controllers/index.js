@@ -10,11 +10,15 @@ const getCurrent = require("./auth/getCurrent");
 const logout = require("./auth/logout");
 const updateSubscription = require("./auth/updateSubscription");
 const updateAvatar = require("./auth/updateAvatar");
+const verifyEmail = require("./auth/verifyEmail");
+const resentVerifyEmail = require("./auth/resentVerifyEmail");
 
 const ctrlWrapper = require("../helpers/ctrlWrapper");
 
 module.exports = {
   register: ctrlWrapper(register),
+  verifyEmail: ctrlWrapper(verifyEmail),
+  resentVerifyEmail: ctrlWrapper(resentVerifyEmail),
   login: ctrlWrapper(login),
   getCurrent: ctrlWrapper(getCurrent),
   logout: ctrlWrapper(logout),
